@@ -1,0 +1,186 @@
+<html>
+    <head>
+        <title>Шахматы</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script th:src="@{/webjars/stomp-websocket/stomp.min.js}"></script>
+        <script th:src="@{/webjars/sockjs-client/sockjs.min.js}"></script>
+        <link rel="stylesheet" th:href="@{/chess/chess.css}">
+
+        <script
+                src="https://code.jquery.com/jquery-3.7.1.min.js"
+                integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+                crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="game">
+            <div class="opponent_and_history">
+                <p class="opponent">bot</p>
+
+                <div>
+                    <p>История ходов</p>
+                    <div th:replace="~{/icons/history :: history}"></div>
+                </div>
+            </div>
+
+            <div class="turn_and_timer">
+                <div class="turn">
+                    <p></p>
+                </div>
+
+                <div class="shah_or_mate">
+                    <p></p>
+                </div>
+
+                <div class="timer">
+                    <p></p>
+                </div>
+            </div>
+
+            <div class="chess">
+                <div>
+                    <p class="cell_name">a</p>
+                    <p class="cell_name">b</p>
+                    <p class="cell_name">c</p>
+                    <p class="cell_name">d</p>
+                    <p class="cell_name">e</p>
+                    <p class="cell_name">f</p>
+                    <p class="cell_name">g</p>
+                    <p class="cell_name">h</p>
+                </div>
+
+                <div>
+                    <div>
+                        <div class="cell_num">
+                            <p>8</p>
+                        </div>
+
+                        <div class="cell_num">
+                            <p>7</p>
+                        </div>
+
+                        <div class="cell_num">
+                            <p>6</p>
+                        </div>
+
+                        <div class="cell_num">
+                            <p>5</p>
+                        </div>
+
+                        <div class="cell_num">
+                            <p>4</p>
+                        </div>
+
+                        <div class="cell_num">
+                            <p>3</p>
+                        </div>
+
+                        <div class="cell_num">
+                            <p>2</p>
+                        </div>
+
+                        <div class="cell_num">
+                            <p>1</p>
+                        </div>
+                    </div>
+
+                    <div class="chess_table">
+                        <div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+
+                        <div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+
+                        <div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+
+                        <div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+
+                        <div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+
+                        <div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+
+                        <div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+
+                        <div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <p class="username">Sergey</p>
+            </div>
+        </div>
+
+        <script th:src="@{/chess/chess.js}"></script>
+    </body>
+</html>

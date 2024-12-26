@@ -1,0 +1,103 @@
+<th:block th:fragment="authentication_form_main">
+    <link rel="stylesheet" th:href="@{/index/authentication_form/mobile/authentication_form_main.css}">
+
+    <div>
+        <div class="auth_form">
+            <div class="login">
+                <div>
+                    <p>Логин</p>
+                    <div th:replace="~{/icons/user :: user}"></div>
+                </div>
+
+                <input type="text" class="login_inp">
+            </div>
+
+            <div class="password">
+                <div>
+                    <p>Пароль</p>
+                    <div th:replace="~{/icons/password :: password}"></div>
+                </div>
+
+                <input type="password" class="password_inp">
+            </div>
+
+            <div class="forgot_pass">
+                <p>Забыли пароль?</p>
+            </div>
+        </div>
+
+        <div class="reg_form">
+            <div class="login">
+                <div>
+                    <p>Логин</p>
+                    <div th:replace="~{/icons/user :: user}"></div>
+                </div>
+
+                <input type="text" class="login_inp">
+            </div>
+
+            <div class="password">
+                <div>
+                    <p>Пароль</p>
+                    <div th:replace="~{/icons/password :: password}"></div>
+                </div>
+
+                <input type="password" class="password_inp">
+            </div>
+
+            <div class="repeat_password">
+                <div>
+                    <p>Повторите пароль</p>
+                    <div th:replace="~{/icons/password :: password}"></div>
+                </div>
+
+                <input type="password" class="repeat_password_inp">
+            </div>
+
+            <div class="control_word">
+                <div>
+                    <p>Введите контрольное слово</p>
+                </div>
+
+                <input type="text" class="control_word_inp">
+            </div>
+        </div>
+
+        <div class="forgot_pass_form">
+            <div class="login">
+                <div>
+                    <p>Логин</p>
+                    <div th:replace="~{/icons/user :: user}"></div>
+                </div>
+
+                <input type="text" class="login_inp">
+            </div>
+
+            <div class="password">
+                <div>
+                    <p>Пароль</p>
+                    <div th:replace="~{/icons/password :: password}"></div>
+                </div>
+
+                <input type="password" class="password_inp">
+            </div>
+
+            <div class="new_password">
+                <div>
+                    <p>Новый пароль</p>
+                    <div th:replace="~{/icons/password :: password}"></div>
+                </div>
+
+                <input type="password" class="new_password_inp">
+            </div>
+
+            <div class="control_word">
+                <div>
+                    <p>Контрольное слово</p>
+                </div>
+
+                <input type="text" class="control_word_inp">
+            </div>
+        </div>
+    </div>
+</th:block>

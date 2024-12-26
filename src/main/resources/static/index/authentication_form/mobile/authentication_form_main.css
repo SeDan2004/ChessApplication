@@ -1,0 +1,140 @@
+@media(min-width: 320px) and (max-width: 1280px) {
+    body {
+        margin: 5%;
+    }
+
+    .authentication_form_header > div:first-of-type {
+        padding: 0 1rem;
+        font-family: Arial;
+        border-bottom: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .app_name {
+        margin: 1.5rem 0rem;
+        font-size: 1.5rem;
+        width: fit-content;
+        padding-bottom: 5px;
+        border-bottom: 1px solid black;
+    }
+
+    .toggle_form {
+        width: 100%;
+        margin-bottom: 0.5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .toggle_form p {
+        transition: 0.3s;
+        border-radius: 20px;
+        padding: 0.2rem 1rem;
+        box-shadow: 0px 0px 1px;
+    }
+
+    .active {
+        background-color: gold;
+    }
+
+    .authentication_form_header > div:last-of-type {
+        display: none;
+    }
+
+    .authentication_form_main {
+        margin: 1rem 0rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .authentication_form_main > div:first-of-type {
+        font-family: Arial;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .authentication_form_main > div:last-of-type {
+        display: none;
+    }
+
+    .authentication_form_main > div:first-of-type input {
+        height: 2rem;
+        font-size: 1.2rem;
+        padding-left: 0.2rem;
+    }
+
+    .auth_form, .reg_form, .forgot_pass_form {
+        transition: 0.5s;
+    }
+
+    .reg_form, .forgot_pass_form {
+        opacity: 0;
+    }
+
+    .auth_form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .auth_form div:not(:first-of-type) {
+        margin-top: 1.5rem;
+    }
+
+    .user, .pass {
+        width: 30px;
+        height: 30px;
+        margin-left: 0.5rem;
+    }
+
+    .login, .password, .repeat_password, .new_password {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .login div, .password div, .repeat_password div, .control_word div, .new_password div {
+        margin-bottom: 0.5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .reg_form {
+        display: none;
+        flex-direction: column;
+
+        .user, .pass {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    .reg_form > div:not(:first-of-type) {
+        margin-top: 1rem;
+    }
+
+    .forgot_pass_form {
+        display: none;
+        flex-direction: column;
+
+        .user, .pass {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    .forgot_pass_form > div:not(:first-of-type) {
+        margin-top: 1rem;
+    }
+
+    .forgot_pass {
+        color: blue;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+}

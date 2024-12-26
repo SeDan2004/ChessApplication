@@ -1,0 +1,223 @@
+body {
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.history {
+    width: 30px;
+    height: 30px;
+}
+
+.opponent_and_history {
+    width: 100%;
+    font-family: Arial;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.opponent_and_history > div:last-of-type {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.turn_and_timer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.turn_and_timer p {
+    font-size: 1.2rem;
+    font-family: Arial;
+}
+
+.shah_or_mate, .timer {
+    margin-left: 1rem;
+}
+
+.chess {
+    margin-top: 1rem;
+    text-align: center;
+    font-family: Arial;
+}
+
+.chess > div:first-of-type {
+    padding-right: 5px;
+    margin-bottom: 10px;
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.chess > div:first-of-type p {
+    width: calc(100% / 8);
+}
+
+.chess > div:last-of-type {
+    display: flex;
+    flex-direction: row;
+}
+
+.chess > div:last-of-type > div:first-of-type {
+    width: 2rem;
+    padding: 5px 0;
+    font-family: Arial;
+    display: flex;
+    flex-direction: column;
+}
+
+.cell_num {
+    height: calc(100% / 8);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.chess_table {
+    width: 100%;
+    box-sizing: border-box;
+    border: 5px ridge chocolate;
+    display: flex;
+    flex-direction: column;
+}
+
+.chess_table > div {
+    width: 100%;
+    height: calc(100% / 8);
+    display: flex;
+}
+
+.chess_table > div:nth-child(odd) {
+    flex-direction: row;
+}
+
+.chess_table > div:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.chess_table > div div {
+    position: relative;
+    width: calc((100% / 8) + 1px);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.chess_table > div div:nth-child(odd) {
+    background-color: #d7ca79;
+}
+
+.chess_table > div div:nth-child(even) {
+    background-color: rgb(50, 50, 50);
+}
+
+.game > div:last-of-type {
+    width: 100%;
+    margin-top: 1.5rem;
+    font-family: Arial;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.chess_table div div svg {
+    z-index: 2;
+    width: 75%;
+    top: 12.5%;
+    left: 12.5%;
+    height: 75%;
+    transition: 0.8s;
+    position: absolute;
+}
+
+.mark {
+    z-index: 3;
+    width: 25%;
+    height: 25%;
+    border-radius: 30px;
+}
+
+.move_cell {
+    background-color: limegreen;
+}
+
+.attack_cell {
+    background-color: red;
+}
+
+@media(min-width: 320px) and (max-width: 1280px) {
+    .game {
+        padding: 1rem;
+    }
+
+    .opponent_and_history > div:last-of-type p {
+        display: none;
+    }
+
+    .chess p {
+        font-size: 1rem;
+    }
+
+    .opponent, .game > div:last-of-type p {
+        font-size: 1.2rem;
+    }
+}
+
+@media(min-width: 320px) and (max-width: 500px) {
+    .chess {
+        width: 340px;
+        height: 340px;
+    }
+}
+
+@media(min-width: 500px) {
+    .chess {
+        width: 500px;
+        height: 500px;
+    }
+}
+
+@media(min-width: 1280px) {
+    .game {
+        padding: 1rem 5rem;
+    }
+
+    .opponent_and_history > div:last-of-type {
+        cursor: pointer;
+        border-radius: 30px;
+        padding: 0.5rem 1rem;
+        background-color: khaki;
+    }
+
+    .chess p {
+        font-size: 1.5rem;
+    }
+
+    .opponent_and_history > div:last-of-type:hover {
+        background-color: #bbb26d;
+    }
+
+    .opponent_and_history > div:last-of-type p {
+        margin-right: 1rem;
+    }
+
+    .opponent, .game > div:last-of-type p {
+        font-size: 1.5rem;
+    }
+}

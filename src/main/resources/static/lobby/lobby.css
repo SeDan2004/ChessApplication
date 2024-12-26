@@ -1,0 +1,223 @@
+body {
+    margin: 0;
+    padding: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+@media (min-width: 320px) and (max-width: 1280px) {
+    .user_icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .user {
+        width: 20px;
+        height: 20px;
+    }
+
+    .user_box > div:last-of-type {
+        margin-top: 1.5rem;
+    }
+
+    .pag_btns {
+        justify-content: center;
+    }
+
+    .user_box {
+        margin-top: 1rem;
+    }
+
+    .pag_btns {
+        flex-grow: 1;
+        align-items: flex-end;
+    }
+}
+
+@media(max-width: 600px) {
+    .refuse_and_accept {
+        width: 100%;
+        padding: 0 0.5rem;
+        justify-content: space-between;
+    }
+}
+
+@media(min-width: 600px) {
+    .accept {
+        margin-left: 1rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .user_icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .user {
+        width: 25px;
+        height: 25px;
+    }
+
+    .pag_btns {
+        justify-content: flex-end;
+    }
+
+    .user_box {
+        margin: 1rem 1rem 0rem 1rem;
+    }
+
+    .pag_btns {
+        margin-top: 1rem;
+        align-items: center;
+    }
+}
+
+.users_lst {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.user_icon {
+    border-radius: 30px;
+    box-shadow: 0px 0px 3px;
+    background-color: #484848;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.user {
+    fill: white;
+}
+
+.users_lst_head {
+    font-family: Arial;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user_list {
+    display: flex;
+    flex-direction: column;
+}
+
+.user_box {
+    padding: 1rem;
+    font-family: Arial;
+    border-radius: 5px;
+    background-color: #484848;
+}
+
+.user_box > div:first-of-type {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.user_box > div:first-of-type p {
+    color: white;
+    margin-left: 1rem;
+    font-size: 1.2rem;
+}
+
+.user_box > div:last-of-type {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.user_box h2 {
+    color: white;
+    margin-left: 1rem;
+}
+
+.refuse_and_accept {
+    display: none;
+}
+
+.invite {
+    display: flex;
+}
+
+.invite, .cancel, .refuse, .accept {
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+}
+
+.invite, .accept {
+    background-color: blue;
+}
+
+.invite:hover, .accept:hover {
+    background-color: rgb(0, 0, 200);
+}
+
+.cancel, .refuse {
+    background-color: red;
+}
+
+.cancel:hover, .refuse:hover {
+    background-color: rgb(200, 0, 0);
+}
+
+.pag_btns {
+    margin-top: 1rem;
+    display: none;
+    flex-direction: row;
+}
+
+.pag_btn {
+    color: black;
+    cursor: pointer;
+    transition: 0.3s;
+    user-select: none;
+    font-family: Arial;
+    background-color: gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pag_btn:not(:first-of-type) {
+    margin-left: 1rem;
+}
+
+.back, .next {
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+
+.pag_btn:not(.back, .next) {
+    display: none;
+    border-radius: 30px;
+    padding: 0.5rem 0.8rem;
+}
+
+.disabled_pag {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.active {
+    color: gold;
+    cursor: default;
+    background-color: black;
+}
+
+.pag_btn:not(.active):hover {
+    background-color: #b79b00;
+}

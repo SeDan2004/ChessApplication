@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>Шахматы - вход</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" th:href="@{/index/index.css}">
+
+        <script
+                src="https://code.jquery.com/jquery-3.7.1.min.js"
+                integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+                crossorigin="anonymous"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/device.js/0.2.7/device.min.js"></script>
+    </head>
+    <body>
+        <div class="authentication_form">
+            <div class="authentication_form_header">
+                <div>
+                    <p class="app_name">Шахматы онлайн</p>
+
+                    <div class="toggle_form">
+                        <p class="reg">Рег</p>
+                        <p class="auth active">Авт</p>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="toggle_form">
+                        <p class="reg">Регистрация</p>
+                        <p class="auth active">Авторизация</p>
+                    </div>
+
+                    <p class="app_name">Шахматы онлайн</p>
+                </div>
+            </div>
+
+            <div class="main_and_footer">
+                <div class="authentication_form_main">
+                    <div th:replace="~{/authentication_form_modules/mobile/authentication_form_main :: authentication_form_main}"></div>
+                    <div th:replace="~{/authentication_form_modules/authentication_form_main :: authentication_form_main}"></div>
+                </div>
+
+                <div class="authentication_form_footer">
+                    <div class="back">
+                        <p>Назад</p>
+                    </div>
+
+                    <div class="accept">
+                        <p>Подтвердить</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script th:src="@{/index/index.js}"></script>
+    </body>
+</html>
